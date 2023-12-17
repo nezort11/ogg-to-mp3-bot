@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "target": "ESNext",
+    "moduleResolution": "nodenext",
+    "allowJs": true,
+    "declaration": false,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "lib": [
+      "ESNext"
+    ],
+    "module": "CommonJS", // commonjs in emitted .js files
+    "outDir": "./build",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "alwaysStrict": false,
+    "skipLibCheck": true
+  },
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  voice-translate-bot:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    restart: unless-stopped
+    image: ${IMAGE_NAME}
+    container_name: ${CONTAINER_NAME}
+    # platform: linux/amd64
+    command: yarn dev2
+    env_file:
+      - ./.env
+
+    deploy:
+      resources:
+        limits:
+          cpus: "4" # default unlimited
+          memory: 2G # default 64M
+        reservations:
+          # cpus: 0.25
+          memory: 256M
+
+    # networks:
+    #   - ${CONTAINER_NAME}_net
+    # volumes:
+    #   - /app/node_modules
+    #   - .:/app:z
+    # ports:
+    #   - "${PORT}:${PORT}"
+# networks:
+#   "example2_net":
+#     name: "${CONTAINER_NAME}_net"
+

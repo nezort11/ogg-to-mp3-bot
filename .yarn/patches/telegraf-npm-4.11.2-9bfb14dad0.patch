@@ -1,0 +1,12 @@
+diff --git a/lib/core/network/polling.js b/lib/core/network/polling.js
+index 42f20a5090304c56d0970da56eeaaacaa518ca92..ce205c9f46e95be586fd88eb7fd0fa0c6718f4d8 100644
+--- a/lib/core/network/polling.js
++++ b/lib/core/network/polling.js
+@@ -31,6 +31,7 @@ class Polling {
+                     timeout: 50,
+                     offset: this.offset,
+                     allowed_updates: this.allowedUpdates,
++                    limit: 1,
+                 }, this.abortController);
+                 const last = updates[updates.length - 1];
+                 if (last !== undefined) {
