@@ -1,6 +1,6 @@
 FROM node:16-bullseye
 
-RUN corepack enable && corepack prepare yarn@3 --activate
+RUN corepack enable && corepack prepare yarn@3.4.1 --activate
 
 WORKDIR /app
 
