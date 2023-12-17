@@ -3,7 +3,6 @@ import process from "process";
 import { Context, Telegraf } from "telegraf";
 import { message } from "telegraf/filters";
 import * as dotenv from "dotenv";
-import { getVoiceTranslate } from "./translate";
 import axios from "axios";
 import { load } from "cheerio";
 import { createFFmpeg, fetchFile } from "@ffmpeg/ffmpeg";
